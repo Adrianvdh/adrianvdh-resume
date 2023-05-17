@@ -1,0 +1,10 @@
+.DS_Store
+
+# Ignore Hugo's public directory, which is the default output directory for Hugo's static HTML.
+/public/
+
+# Ignore Hugo's resources directory, which is used to cache Hugo's image processing.
+/resources/
+
+# Ignore Hugo's temp directory, which may be used by Hugo pipes on unix systems.
+/tmp/

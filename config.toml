@@ -1,4 +1,4 @@
-baseURL = 'http://adrianvdh.com/'
+baseURL = 'https://adrianvdh.com/'
 title = 'Adrian van den Houten | Resume'
 theme = 'resume'
 languageCode = "en-us"
