@@ -4,7 +4,9 @@ on:
   push:
     branches: [ "master" ]
 
-
+env:
+  CLOUDFRONT_DISTRIBUTION_ID: E2CP33IKQAMIK6
+  
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -32,4 +34,4 @@ jobs:
       run: aws s3 sync ./public/ s3://adrianvdh.com  # Set your bucket name here
 
     - name: Invalidate CloudFront distribution
-      run: aws cloudfront create-invalidation --distribution-id ${{ variables.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+      run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
